@@ -6,7 +6,8 @@ import subprocess, os, sys
 # ==================================================
 # Note: In a real repo, this would be __file__. 
 # If running directly in Colab cell as a script, we assume CWD is the root.
-REPO_DIR = Path(".").resolve()
+
+REPO_DIR = Path(__file__).resolve().parent
 
 INSTALL_SCRIPT = REPO_DIR / "setup" / "install_dedalus.sh"
 MAGIC_FILE     = REPO_DIR / "magic" / "dedalus_magic.py"
