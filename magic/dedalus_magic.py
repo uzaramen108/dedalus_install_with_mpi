@@ -90,13 +90,13 @@ def dedalus(line, cell):
     if info_mode:
         info_code = """
 from mpi4py import MPI
-import dolfinx, sys, platform, os
+import dedalus, sys, platform, os
 
 comm = MPI.COMM_WORLD
 if comm.rank == 0:
     print()
     print("🐍 Python          :", sys.version.split()[0])
-    print("📦 dolfinx         :", dolfinx.__version__)
+    print("📦 dedalus         :", dedalus.__version__)
     print("💻 Platform        :", platform.platform())
     print("🧵 Running as root :", os.geteuid() == 0)
 """
